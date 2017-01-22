@@ -5,7 +5,7 @@ import os
 import requests
 from requests.exceptions import RequestException
 
-from .kagetora import Kagetora
+from kagetora import Kagetora
 
 
 class AlbumDownloader(Kagetora):

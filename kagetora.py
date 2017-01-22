@@ -9,6 +9,7 @@ class Kagetora(object):
     def __init__(self, setting):
         self.setting = setting
         self.driver = webdriver.PhantomJS()
+        self.driver.implicitly_wait(10)
         self.login()
 
     def find(self, selector):
