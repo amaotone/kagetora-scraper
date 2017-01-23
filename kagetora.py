@@ -21,6 +21,10 @@ class Kagetora(object):
             EC.presence_of_all_elements_located((By.CSS_SELECTOR, selector)))
 
     def login(self):
+        if 'トップ' in self.driver.title:
+            print('login succeeded')
+            return
+
         self.driver.get('http://kagetora.bushidoo.com/')
 
         # shared
@@ -42,4 +46,3 @@ class Kagetora(object):
             print('login succeeded')
         except TimeoutException:
             print('login failed')
-            raise TimeoutException
